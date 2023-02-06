@@ -1,6 +1,6 @@
 
 CC = c++ -Wall -Wextra -Werror -std=c++98 -g -o Polymorph 
-SRC =  polymorph.cpp main.cpp
+SRC =  polymorph.cpp main.cpp WrongAnimal.cpp
 
 NAME = Polymorph
 

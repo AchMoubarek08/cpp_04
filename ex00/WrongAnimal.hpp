@@ -25,25 +25,8 @@ class   WrongCat : public WrongAnimal
         WrongCat();
         WrongCat(WrongCat const & src);
         ~WrongCat();
-
         WrongCat & operator=(WrongCat const & rhs);
-        virtual void makeSound() const;
         std::string getType()const;
 };
-
-// WrongDog class
-
-class   WrongDog : public WrongAnimal
-{
-    public:
-        WrongDog();
-        WrongDog(WrongDog const & src);
-        ~WrongDog();
-
-        WrongDog & operator=(WrongDog const & rhs);
-        virtual void makeSound() const;
-        std::string getType() const;
-};
-
 
 #endif
