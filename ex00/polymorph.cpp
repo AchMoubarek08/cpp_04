@@ -1,7 +1,10 @@
 #include "polymorph.hpp"
 
 // animal canonical form
-
+void Animal::makeSound() const
+{
+    std::cout << "Animal default sound" << std::endl;
+}
 Animal::Animal() : type("Animal") 
 {
     std::cout << "Animal default constructor called" << std::endl;

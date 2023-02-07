@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amoubare <amoubare@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/07 23:22:46 by amoubare          #+#    #+#             */
+/*   Updated: 2023/02/08 00:44:09 by amoubare         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "WrongAnimal.hpp"
 
 void	WrongAnimal::makeSound() const
@@ -29,6 +41,33 @@ WrongAnimal::~WrongAnimal()
 WrongAnimal & WrongAnimal::operator=(WrongAnimal const & rhs)
 {
     std::cout<< "WrongAnimal assignment operator called"<< std::endl;
+    if (this != &rhs)
+        _type = rhs._type;
+    return (*this);
+}
+// wrong cat canonical member functions
+
+
+WrongCat::WrongCat() : WrongAnimal()
+{
+    std::cout<< "WrongCat default constructor called"<< std::endl;
+    _type = "WrongCat";
+}
+
+WrongCat::WrongCat(WrongCat const & src)
+{
+    std::cout<< "WrongCat copy constructor called"<< std::endl;
+    *this = src;
+}
+
+WrongCat::~WrongCat()
+{
+    std::cout<< "WrongCat destructor called"<< std::endl;
+}
+
+WrongCat & WrongCat::operator=(WrongCat const & rhs)
+{
+    std::cout<< "WrongCat assignment operator called"<< std::endl;
     if (this != &rhs)
         _type = rhs._type;
     return (*this);

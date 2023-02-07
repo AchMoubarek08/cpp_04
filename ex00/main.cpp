@@ -26,12 +26,8 @@ int main()
 
     WrongAnimal* meta2 = new WrongAnimal();
     WrongAnimal* j2 = new WrongCat();
-    WrongAnimal* i2 = new WrongDog();
-    WrongCat wrongCat;
     std::cout << j2->getType() << " sounds like: ";
     j2->makeSound();
-    std::cout << i2->getType() << " sounds like: ";
-    i2->makeSound();
     std::cout << meta2->getType() << " sounds like: ";
     meta2->makeSound();
     return 0;
